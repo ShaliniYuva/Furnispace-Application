@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageProduct"
+            android:layout_marginStart="16dp"
+            android:text="Product Title"
+            android:textColor="#154B4D"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_alignStart="@id/textTitle"
+            android:layout_marginTop="6dp"
+            android:text="RM 500"
+            android:textColor="#A0B51F"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserrat_medium" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

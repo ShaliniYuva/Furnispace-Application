@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/toast_background"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textToastMessage"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:text="Toast Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

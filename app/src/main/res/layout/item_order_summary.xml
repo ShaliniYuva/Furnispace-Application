@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/placeholder"
+        android:scaleType="centerCrop"
+
+        android:layout_marginEnd="12dp"
+        android:clipToOutline="true" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Product Name"
+            android:textColor="#154B4D"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="RM 0.00"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x1"
+        android:textSize="20dp"
+        android:textColor="@color/teal_900"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textStyle="bold" />
+</LinearLayout>

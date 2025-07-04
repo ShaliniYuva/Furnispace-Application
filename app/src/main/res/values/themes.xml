@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Fyp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#154B4D</item>
+        <item name="colorSecondary">#154B4D</item>
+        <item name="colorControlActivated">#154B4D</item>
+    </style>
+
+    <style name="Theme.Fyp" parent="Base.Theme.Fyp" />
+
+    <style name="Widget.MyButton.Shadowed" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="elevation">6dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+</resources>

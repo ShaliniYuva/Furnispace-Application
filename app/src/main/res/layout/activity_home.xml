@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header: App name and profile -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FurniSpace"
+                        android:textColor="#154B4D"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textWelcomeUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome!"
+                        android:textColor="#6E7C7C"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="2dp">
+
+                    <ImageView
+                        android:id="@+id/imageUserProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Category Buttons -->
+            <HorizontalScrollView
+                android:id="@+id/categoryScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnChair"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chair"
+                        android:backgroundTint="@color/button_background_selector"
+                        android:textColor="@color/button_text_selector"
+                        android:elevation="6dp"
+                        app:cornerRadius="24dp"
+                        app:iconPadding="8dp"
+                        app:icon="@drawable/icon_seat"
+                        app:iconTint="@color/button_icon_selector"
+                        android:layout_marginEnd="16dp"
+                        android:checkable="true"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnBed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bed"
+                        android:backgroundTint="@color/button_background_selector"
+                        android:textColor="@color/button_text_selector"
+                        android:elevation="6dp"
+                        app:cornerRadius="24dp"
+                        app:iconPadding="8dp"
+                        app:icon="@drawable/icon_bed"
+                        app:iconTint="@color/button_icon_selector"
+                        android:layout_marginEnd="16dp"
+                        android:checkable="true"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Table"
+                        android:backgroundTint="@color/button_background_selector"
+                        android:textColor="@color/button_text_selector"
+                        android:elevation="6dp"
+                        app:cornerRadius="24dp"
+                        app:iconPadding="8dp"
+                        app:icon="@drawable/icon_table"
+                        app:iconTint="@color/button_icon_selector"
+                        android:layout_marginEnd="16dp"
+                        android:checkable="true"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCupboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cupboard"
+                        android:backgroundTint="@color/button_background_selector"
+                        android:textColor="@color/button_text_selector"
+                        android:elevation="6dp"
+                        app:cornerRadius="24dp"
+                        app:iconPadding="8dp"
+                        app:icon="@drawable/icon_cupboard"
+                        app:iconTint="@color/button_icon_selector"
+                        android:layout_marginEnd="16dp"
+                        android:checkable="true"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- No items message (moved here and centered) -->
+            <TextView
+                android:id="@+id/textNoItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No items found in this category."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Product list -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_armchair" />
+
+                <include layout="@layout/item_dining_table" />
+
+                <include layout="@layout/item_lounge_chair" />
+
+                <include layout="@layout/item_study_table" />
+
+                <include layout="@layout/item_coffee_table" />
+
+                <include layout="@layout/item_bed" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/teal_900"
+        app:itemTextColor="@color/teal_900"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

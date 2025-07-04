@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624061566150",
+    "project_id": "arapps-final",
+    "storage_bucket": "arapps-final.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624061566150:android:90c52ca85150366f031bc7",
+        "android_client_info": {
+          "package_name": "com.example.fyp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiZlRc0Hb6AddL4j-m1faXJ0KqMole6Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

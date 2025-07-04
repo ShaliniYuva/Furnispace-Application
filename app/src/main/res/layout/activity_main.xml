@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onboarding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="687dp"
+        android:layout_above="@+id/onboardTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_onboarding" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="84dp"
+        android:gravity="center"
+        android:text="FurniSpace"
+        android:textColor="#154b4d"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/unboxAnimation"
+        android:layout_width="352dp"
+        android:layout_height="468dp"
+        android:layout_below="@id/appName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="27dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="unbox_animation.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1.2" />
+
+
+    <TextView
+        android:id="@+id/onboardTitle"
+        android:layout_width="370dp"
+        android:layout_height="148dp"
+        android:layout_below="@id/unboxAnimation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-29dp"
+        android:layout_marginEnd="19dp"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Experience Furniture in Your Real World with AR"
+        android:textColor="#154b4d"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/onboardTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="140dp"
+        android:background="@drawable/btn_next_rounded"
+        android:text="Next  >"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:backgroundTint="#0B4D4B"
+        app:cornerRadius="50dp" />
+
+</RelativeLayout>
